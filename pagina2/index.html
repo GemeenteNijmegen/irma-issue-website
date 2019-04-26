@@ -9,7 +9,7 @@
     <script type="text/javascript" src="https://services-test.nijmegen.nl/irma/gemeente/js/irma.js"></script>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
-            window.irma.handleSession(JSON.parse('{{ sessionPtr }}'))
+            window.irma.handleSession(JSON.parse('{{ sessionPtr }}'), {language: 'nl'})
             .then(() => {
                 document.querySelector('#statusText').innerHTML = 'Uw attributen zijn succesvol geladen.';
             })
@@ -19,7 +19,7 @@
         });
     </script>
 
-    <link rel="stylesheet" href="https://s3-eu-west-1.amazonaws.com/irma-brp/css/prism.css" />
+    <link rel="stylesheet" href="https://s3-eu-west-1.amazonaws.com/irma-brp/css/theme.css" />
     <link rel="stylesheet" href="https://s3-eu-west-1.amazonaws.com/irma-brp/css/main.css" />
 </head>
 
