@@ -6,7 +6,12 @@
     <title>IRMA BRP attributen</title>
     <meta name="viewport" content="width=device-width" />
 
-    <script type="text/javascript" src="https://services-test.nijmegen.nl/irma/gemeente/js/irma.js"></script>
+    <script type="text/javascript"
+            src="https://services-test.nijmegen.nl/irma/gemeente/js/irma.js"
+            integrity="sha256-B15BUqBm5fogqpjf3u6ELoiYyxeVYbRo0xsUwD8dwCo="
+            crossorigin="anonymous"
+    >
+    </script>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
             window.irma.handleSession(JSON.parse('{{ sessionPtr }}'), {language: 'nl'})
