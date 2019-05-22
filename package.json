@@ -4,11 +4,11 @@
   "license": "Apache-2.0",
   "scripts": {
     "start": "per-env",
-    "start:production": "npm run -s serve",
-    "start:development": "npm run -s dev",
-    "build": "preact build",
-    "serve": "preact build && preact serve",
-    "watch": "preact watch",
+    "start:production": "yarn -s serve",
+    "start:development": "yarn -s watch",
+    "build": "preact build --template ./src/template.html",
+    "serve": "yarn build && preact serve",
+    "watch": "preact watch --template ./src/template.html",
     "lint": "eslint src",
     "test": "jest"
   },
