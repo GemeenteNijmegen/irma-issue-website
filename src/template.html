@@ -10,6 +10,10 @@
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 
+		<script type="text/javascript">
+			window.irmaSessionPtr = '';
+		</script>
+
 		<link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath %>manifest.json">
 		<% if (htmlWebpackPlugin.options.manifest.theme_color) { %>
 			<meta name="theme-color" content="<%= htmlWebpackPlugin.options.manifest.theme_color %>">

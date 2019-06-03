@@ -5,9 +5,12 @@ import './style/theme';
 import './style/main';
 
 import Home from './pages/home';
+import Issue from './pages/issue';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+
+require('@privacybydesign/irmajs/dist/irma');
 
 export default class App extends Component {
 
@@ -21,7 +24,8 @@ export default class App extends Component {
         <Navbar />
         <div class="navPusher">
           <Router onChange={this.handleRoute}>
-            <Home path="/" />
+            <Home path="/irma/gemeente/start" />
+            <Issue path="/irma/gemeente/issue-secured" />
           </Router>
           <Footer />
         </div>
