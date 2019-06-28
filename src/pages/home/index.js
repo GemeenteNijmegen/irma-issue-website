@@ -1,6 +1,9 @@
 import { Component } from 'preact';
 
+import { namespacedTranslation } from '../../lib/i18n';
 import MunicipalityLogos from '../../components/MunicipalityLogos';
+
+const t = namespacedTranslation('Home');
 
 export default class Home extends Component {
   render() {
@@ -10,7 +13,7 @@ export default class Home extends Component {
           <div class="homeSplashFade">
             <div class="wrapper homeWrapper">
               <div class="inner">
-                <h1 class="projectTitle">IRMA BRP attributen laden via DigiD</h1>
+                <h1 class="projectTitle">{ t('.title') }</h1>
               </div>
               <div style="margin: 0 auto; max-width: 80%">
                 <p>Via deze pagina kunt u uw gegevens uit de basisregistratie personen (BRP) laden als attributen in IRMA. Klik op 'inloggen' om in te loggen met DigiD en het laden van de IRMA attributen te starten.</p>

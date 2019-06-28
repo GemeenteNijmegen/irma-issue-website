@@ -6,6 +6,11 @@ import './style/main';
 
 import Home from './pages/home';
 import Issue from './pages/issue';
+import FAQ from './pages/faq';
+import About from './pages/about';
+import Error from './pages/error';
+import Disclose from './pages/disclose';
+import NotFound from './pages/notfound';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -18,15 +23,33 @@ export default class App extends Component {
     this.currentUrl = e.url;
   };
 
+  renderRouter() {
+    if(typeof window.irmaErrorString === 'string' && window.irmaErrorString !== '')
+      return <Error />
+
+    return (
+      <Router onChange={this.handleRoute}>
+        <Home path="/irma/gemeente/start" />
+        <Issue path="/irma/gemeente/issue" />
+        <Issue path="/irma/gemeente/issue-secured" />
+
+        <Disclose path="/irma/gemeente/re-issue" />
+        <Issue path="/irma/gemeente/re-issue-final" />
+
+        <FAQ path="/irma/gemeente/faq" />
+        <About path="/irma/gemeente/over" />
+
+        <NotFound default />
+      </Router>
+    );
+  }
+
   render() {
     return (
       <div id="app">
         <Navbar />
         <div class="navPusher">
-          <Router onChange={this.handleRoute}>
-            <Home path="/irma/gemeente/start" />
-            <Issue path="/irma/gemeente/issue-secured" />
-          </Router>
+          { this.renderRouter() }
           <Footer />
         </div>
       </div>

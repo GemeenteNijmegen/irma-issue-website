@@ -9,8 +9,8 @@ export default class Footer extends Component {
             <img src="https://s3-eu-west-1.amazonaws.com/irma-brp/img/irmaLogoWhite.png" alt="IRMA Laden" />
           </a>
           <div class="footerSection">
-            <a href="en/users">Over</a>
-            <a href="en/users">Veelgestelde vragen</a>
+            <a href="over">Over</a>
+            <a href="faq">Veelgestelde vragen</a>
           </div>
         </section>
       </footer>
