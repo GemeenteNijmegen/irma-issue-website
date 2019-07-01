@@ -1,4 +1,5 @@
 import { Component } from 'preact';
+import DigidLogoutButton from '../../components/DigidLogoutButton';
 
 export default class Error extends Component {
   render() {
@@ -11,6 +12,7 @@ export default class Error extends Component {
                 <h1 class="projectTitle">Fout</h1>
                 <p>{ window.irmaErrorString }</p>
               </div>
+              <DigidLogoutButton />
             </div>
           </div>
         </div>

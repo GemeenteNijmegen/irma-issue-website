@@ -8,6 +8,7 @@ const getPreferredLanguage = () => {
     navigator.userLanguage ||
     'en';
 
+  return 'nl';
   return browserLanguage.slice(0, 2);
 }
 

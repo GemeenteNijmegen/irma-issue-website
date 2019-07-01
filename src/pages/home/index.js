@@ -24,6 +24,15 @@ export default class Home extends Component {
                   <h3 style="display: inline-block; position: relative; top: -15px; left: 15px;">Inloggen met DigiD</h3>
                 </a>
               </div>
+              { /* TODO: Replace with IRMA logo and put this next to the Digid login button, instead of underneath */ }
+              { window.location.hostname !== 'services-test.nijmegen.nl' ? null :
+                <div style="margin-top: 20px;">
+                  <a href="re-issue">
+                    <img src="https://s3-eu-west-1.amazonaws.com/irma-brp/img/digid.png" />
+                    <h3 style="display: inline-block; position: relative; top: -15px; left: 15px;">Inloggen met IRMA</h3>
+                  </a>
+                </div>
+              }
             </div>
           </div>
         </div>

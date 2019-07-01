@@ -5,7 +5,8 @@ import './style/theme';
 import './style/main';
 
 import Home from './pages/home';
-import Issue from './pages/issue';
+import DigidIssue from './pages/digidIssue';
+import ReIssue from './pages/reIssue';
 import FAQ from './pages/faq';
 import About from './pages/about';
 import Error from './pages/error';
@@ -30,11 +31,11 @@ export default class App extends Component {
     return (
       <Router onChange={this.handleRoute}>
         <Home path="/irma/gemeente/start" />
-        <Issue path="/irma/gemeente/issue" />
-        <Issue path="/irma/gemeente/issue-secured" />
+        <DigidIssue path="/irma/gemeente/issue" />
+        <DigidIssue path="/irma/gemeente/issue-manual" />
 
         <Disclose path="/irma/gemeente/re-issue" />
-        <Issue path="/irma/gemeente/re-issue-final" />
+        <ReIssue path="/irma/gemeente/re-issue-final" />
 
         <FAQ path="/irma/gemeente/faq" />
         <About path="/irma/gemeente/over" />

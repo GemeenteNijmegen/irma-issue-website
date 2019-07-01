@@ -27,7 +27,7 @@ export default class Navbar extends Component {
             </a>
             <div class="navigationWrapper navigationSlider">
               <nav class="slidingNav">
-                <ul class="nav-site nav-site-internal">
+                {/* <ul class="nav-site nav-site-internal">
                   <li class="">
                     <a href="over">Over</a>
                   </li>
@@ -47,7 +47,7 @@ export default class Navbar extends Component {
                       </div>
                     </li>
                   </span>
-                </ul>
+                </ul> */}
               </nav>
             </div>
           </header>

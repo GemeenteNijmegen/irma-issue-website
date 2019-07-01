@@ -1,6 +1,6 @@
 import { Component } from 'preact';
 
-export default class Issue extends Component {
+export default class ReIssue extends Component {
 
   componentDidMount() {
     const sessionPtrJson = window.irmaSessionPtr;
@@ -33,16 +33,10 @@ export default class Issue extends Component {
           <div class="homeSplashFade">
               <div class="wrapper homeWrapper">
                   <div class="inner">
-                      <h1 class="projectTitle">IRMA BRP attributen laden via DigiD</h1>
+                      <h1 class="projectTitle">IRMA BRP attributen verversen</h1>
                   </div>
                   <div style="margin-top: 50px;">
                       <p id="statusText">{ this.state.statusText }</p>
-                  </div>
-                  <div style="margin-top: 50px;">
-                      <a href="https://services-test.nijmegen.nl/irma/gemeente/digid/logout">
-                          <img src="https://s3-eu-west-1.amazonaws.com/irma-brp/img/digid.png" />
-                          <h3 style="display: inline-block; position: relative; top: -15px; left: 15px;">Uitloggen bij DigiD</h3>
-                      </a>
                   </div>
               </div>
           </div>

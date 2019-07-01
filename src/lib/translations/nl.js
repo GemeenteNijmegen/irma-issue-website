@@ -1,5 +1,5 @@
 export default {
   Home: {
-    title: 'IRMA BRP attributen laden via DigiD',
+    title: 'IRMA BRP attributen laden',
   }
 };
