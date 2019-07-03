@@ -6,7 +6,8 @@
     "start": "per-env",
     "start:production": "yarn -s serve",
     "start:development": "yarn -s watch",
-    "build": "preact build --template ./src/template.html --no-prerender; ./rename_build.sh; scp build/bundle.js sb:/var/www/scriptbase.org/bundle.js",
+    "build": "preact build --template ./src/template.html --no-prerender",
+    "publish": "./rename_build.sh; scp build/bundle.js sb:/var/www/scriptbase.org/bundle.js",
     "serve": "yarn build && preact serve",
     "watch": "preact watch --template ./src/template.html",
     "lint": "eslint src",
@@ -19,6 +20,7 @@
     "build/*"
   ],
   "devDependencies": {
+    "base64-inline-loader": "^1.1.1",
     "eslint": "^4.9.0",
     "eslint-config-synacor": "^2.0.2",
     "identity-obj-proxy": "^3.0.0",

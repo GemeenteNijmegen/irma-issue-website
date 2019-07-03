@@ -1,5 +1,7 @@
 import { Component } from 'preact';
 
+import alblasserdam from '../assets/gemeenten-logos/alblasserdam.png';
+
 export default class MunicipalityLogos extends Component {
 
   render() {
@@ -8,7 +10,8 @@ export default class MunicipalityLogos extends Component {
         <div class="container lightBackground paddingBottom" style="padding-top: 20px">
           <div class="wrapper municipalityLogos">
             <h2>Deelnemende gemeenten</h2>
-            <img src="https://s3-eu-west-1.amazonaws.com/irma-brp/img/gemeenten-logos/alblasserdam.png"/>
+            {/* <img src="https://s3-eu-west-1.amazonaws.com/irma-brp/img/gemeenten-logos/alblasserdam.png"/> */}
+            <img src={alblasserdam} />
             <img src="https://s3-eu-west-1.amazonaws.com/irma-brp/img/gemeenten-logos/amsterdam.png"/>
             <img src="https://s3-eu-west-1.amazonaws.com/irma-brp/img/gemeenten-logos/buren.png"/>
             <img src="https://s3-eu-west-1.amazonaws.com/irma-brp/img/gemeenten-logos/dordrecht.png"/>

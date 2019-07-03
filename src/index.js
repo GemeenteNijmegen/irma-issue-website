@@ -30,7 +30,7 @@ export default class App extends Component {
 
     return (
       <Router onChange={this.handleRoute}>
-        <Home path="/irma/gemeente/start" />
+        <Home path="/irma/gemeente/start.html" />
         <DigidIssue path="/irma/gemeente/issue" />
         <DigidIssue path="/irma/gemeente/issue-manual" />
 
