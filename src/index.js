@@ -16,7 +16,7 @@ import NotFound from './pages/notfound';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
-require('@privacybydesign/irmajs/dist/irma');
+require('./vendor/irma');
 
 export default class App extends Component {
 
@@ -30,7 +30,7 @@ export default class App extends Component {
 
     return (
       <Router onChange={this.handleRoute}>
-        <Home path="/irma/gemeente/start.html" />
+        <Home path="/irma/gemeente/start" />
         <DigidIssue path="/irma/gemeente/issue" />
         <DigidIssue path="/irma/gemeente/issue-manual" />
 
@@ -49,7 +49,7 @@ export default class App extends Component {
     return (
       <div id="app">
         <Navbar />
-        <div class="navPusher">
+        <div class="navPusher" style={{minHeight: 'calc(100vh - 50px)'}}>
           { this.renderRouter() }
           <Footer />
         </div>

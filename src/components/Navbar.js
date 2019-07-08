@@ -1,5 +1,7 @@
 import { Component } from 'preact';
 
+import irmaLogo from '../assets/irmaLogo.png';
+
 export default class Navbar extends Component {
 
   componentDidMount() {
@@ -21,9 +23,9 @@ export default class Navbar extends Component {
       <div class="fixedHeaderContainer">
         <div class="headerWrapper wrapper">
           <header>
-            <a href="https://services-test.nijmegen.nl/irma/gemeente/start">
-              <img class="logo" src="https://s3-eu-west-1.amazonaws.com/irma-brp/img/irmaLogoWhite.png" alt="IRMA Laden" />
-              <h2 class="headerTitleWithLogo">IRMA Laden</h2>
+            <a href="/irma/gemeente/start" style={{height: '50px'}}>
+              <img class="logo" src={irmaLogo} alt="IRMA Laden" />
+              <h2 class="headerTitleWithLogo" style={{fontSize: '1.5em'}}>IRMA Laden</h2>
             </a>
             <div class="navigationWrapper navigationSlider">
               <nav class="slidingNav">

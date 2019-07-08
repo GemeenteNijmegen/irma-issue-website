@@ -12,3 +12,7 @@ body {
 .municipalityLogos img:hover {
     filter: grayscale(0%);
 }
+
+.nav-home {
+    opacity: 1 !important;
+}
