@@ -3,36 +3,63 @@
   "version": "0.0.0",
   "license": "Apache-2.0",
   "scripts": {
-    "start": "per-env",
-    "start:production": "yarn -s serve",
-    "start:development": "yarn -s watch",
-    "build": "preact build --template ./src/template.html --no-prerender",
-    "upload": "./rename_build.sh; scp build/bundle.js sb:/var/www/scriptbase.org/bundle.js",
-    "serve": "yarn build && preact serve",
-    "watch": "preact watch --template ./src/template.html",
-    "lint": "eslint src",
-    "test": "jest"
-  },
-  "eslintConfig": {
-    "extends": "eslint-config-synacor"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress",
+    "prestart": "npm run build",
+    "build": "cross-env NODE_ENV=production webpack --progress",
+    "upload": "scp build/bundle.js sb:/var/www/scriptbase.org/bundle.js",
+    "test": "npm run -s lint && jest --coverage",
+    "test:watch": "npm run -s test -- --watch",
+    "lint": "eslint src "
   },
   "eslintIgnore": [
     "build/*"
   ],
   "devDependencies": {
-    "base64-inline-loader": "^1.1.1",
+    "autoprefixer": "^8.0.0",
+    "babel": "^6.5.2",
+    "babel-core": "^6.24.0",
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "^20.0.0",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.24.0",
+    "babel-runtime": "^6.11.6",
+    "chai": "^4.0.2",
+    "copy-webpack-plugin": "^4.0.1",
+    "core-js": "^2.4.1",
+    "cross-env": "^5.0.1",
+    "css-loader": "^0.28.0",
     "eslint": "^4.9.0",
-    "eslint-config-synacor": "^2.0.2",
+    "eslint-plugin-jest": "^21.7.1",
+    "eslint-plugin-react": "^7.0.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^1.1.7",
+    "html-webpack-plugin": "^3.0.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^21.2.1",
-    "per-env": "^1.0.2",
-    "preact-cli": "^2.1.0",
-    "preact-render-spy": "^1.2.1"
+    "jest": "^20.0.0",
+    "json-loader": "^0.5.4",
+    "postcss-loader": "^2.0.3",
+    "preact-jsx-chai": "^2.2.1",
+    "raw-loader": "^0.5.1",
+    "regenerator-runtime": "^0.10.3",
+    "replace-bundle-webpack-plugin": "^1.0.0",
+    "script-ext-html-webpack-plugin": "^2.0.0",
+    "sinon": "^4.2.1",
+    "sinon-chai": "^2.9.0",
+    "source-map-loader": "^0.2.1",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.0",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.4.4"
   },
   "dependencies": {
     "i18n-js": "^3.2.2",
     "preact": "^8.2.6",
     "preact-compat": "^3.17.0",
-    "preact-router": "^2.5.7"
+    "preact-router": "^2.5.7",
+    "promise-polyfill": "^8.1.3"
   }
 }

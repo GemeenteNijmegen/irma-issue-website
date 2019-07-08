@@ -1,4 +1,4 @@
-import { Component } from 'preact';
+import { Component, h } from 'preact';
 
 import irmaLogo from '../assets/irmaLogo.png';
 
@@ -8,7 +8,7 @@ export default class Footer extends Component {
       <footer class="nav-footer" id="footer">
         <section class="sitemap">
           <a href="" class="nav-home" style={{opacity: 1}}>
-            <img src={irmaLogo} alt="IRMA Laden" />
+            <img src={irmaLogo} alt="IRMA Laden" style={{width: '72px'}} />
           </a>
           {/* <div class="footerSection">
             <a href="over">Over</a>

@@ -1,4 +1,4 @@
-import { Component } from 'preact';
+import { Component, h } from 'preact';
 
 import { namespacedTranslation } from '../../lib/i18n';
 import MunicipalityLogos from '../../components/MunicipalityLogos';

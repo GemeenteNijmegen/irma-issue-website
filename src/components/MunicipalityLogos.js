@@ -1,4 +1,4 @@
-import { Component } from 'preact';
+import { Component, h } from 'preact';
 
 import alblasserdam from '../assets/gemeenten-logos/alblasserdam.png';
 import amsterdam from '../assets/gemeenten-logos/amsterdam.png';

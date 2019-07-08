@@ -9,7 +9,7 @@ const getPreferredLanguage = () => {
     'en';
 
   return 'nl';
-  return browserLanguage.slice(0, 2);
+  // return browserLanguage.slice(0, 2);
 }
 
 // Set I18n global settings

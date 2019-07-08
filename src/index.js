@@ -1,8 +1,9 @@
-import { Component } from 'preact';
+import { Component, h, render } from 'preact';
 import { Router } from 'preact-router';
+import 'promise-polyfill';
 
-import './style/theme';
-import './style/main';
+import './style/theme.css';
+import './style/main.css';
 
 import Home from './pages/home';
 import DigidIssue from './pages/digidIssue';
@@ -49,7 +50,7 @@ export default class App extends Component {
     return (
       <div id="app">
         <Navbar />
-        <div class="navPusher" style={{minHeight: 'calc(100vh - 50px)'}}>
+        <div class="navPusher">
           { this.renderRouter() }
           <Footer />
         </div>
@@ -58,3 +59,9 @@ export default class App extends Component {
   }
 }
 
+let root;
+function init() {
+	root = render(<App />, document.body, root);
+}
+
+init();

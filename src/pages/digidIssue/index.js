@@ -1,4 +1,4 @@
-import { Component } from 'preact';
+import { Component, h } from 'preact';
 import DigidLogoutButton from '../../components/DigidLogoutButton';
 
 export default class DigidIssue extends Component {

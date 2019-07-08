@@ -520,9 +520,9 @@ blockquote{
     .headerTitle{
         font-size:17px
     }
-    .headerTitleWithLogo{
+    /* .headerTitleWithLogo{
         display:none!important
-    }
+    } */
 }
 .promoSection{
     display:flex;
@@ -925,7 +925,7 @@ input::placeholder{
 .navPusher{
     left:0;
     min-height:100%;
-    padding-top:100px;
+    padding-top:50px;
     position:relative;
     z-index:99
 }

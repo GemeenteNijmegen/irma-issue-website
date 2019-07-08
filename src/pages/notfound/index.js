@@ -1,4 +1,4 @@
-import { Component } from 'preact';
+import { Component, h } from 'preact';
 
 export default class NotFound extends Component {
   render() {
