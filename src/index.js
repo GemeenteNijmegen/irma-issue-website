@@ -13,6 +13,7 @@ import About from './pages/about';
 import Error from './pages/error';
 import Disclose from './pages/disclose';
 import NotFound from './pages/notfound';
+import Logout from './pages/logout';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -34,6 +35,7 @@ export default class App extends Component {
         <Home path="/irma/gemeente/start" />
         <DigidIssue path="/irma/gemeente/issue" />
         <DigidIssue path="/irma/gemeente/issue-manual" />
+        <Logout path="/irma/gemeente/digid/logout" />
 
         <Disclose path="/irma/gemeente/re-issue" />
         <ReIssue path="/irma/gemeente/re-issue-final" />
