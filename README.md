@@ -17,9 +17,9 @@ yarn serve
 
 # run tests with jest and preact-render-spy 
 yarn test
-```
 
 # update dependencies to latest version
 yarn upgrade
+```
 
 For detailed explanation on how things work, checkout the Preact [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
