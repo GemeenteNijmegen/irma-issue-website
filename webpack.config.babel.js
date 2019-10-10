@@ -3,7 +3,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import autoprefixer from 'autoprefixer';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
-// import OfflinePlugin from 'offline-plugin';
+
 import path from 'path';
 const ENV = process.env.NODE_ENV || 'development';
 
