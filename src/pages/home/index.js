@@ -19,9 +19,9 @@ export default class Home extends Component {
                 <h1 class="projectTitle">{ t('.title') }</h1>
               </div>
               <div style={{margin: '0 auto', maxWidth: '800px'}}>
-                <p>Haal je persoonsgegevens en adres op uit de de basisregistratie personen (BRP)</p>
-                <p>Je hebt DigiD nodig</p>
-                <p>Je logt in met je DigiD bij de gemeente Nijmegen. Dit omdat de gemeente Nijmegen de gegevens uit de basisregistratie personen (BRP) beschikbaar stelt.</p>
+                <p>Haal je persoonsgegevens en adres op uit de de basisregistratie personen (BRP).</p>
+                <p>De <b>gemeente Nijmegen</b> stelt deze gegevens beschikbaar voor alle gemeenten.</p>
+                <p>Je hebt hiervoor je DigiD nodig.</p>
               </div>
               <div style={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', maxWidth: '600px', margin: '50px auto'}}>
                 <div style={{flex: 1, minWidth: '300px'}}>
