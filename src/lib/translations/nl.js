@@ -1,5 +1,5 @@
 export default {
   Home: {
-    title: 'IRMA BRP attributen laden',
+    title: 'Gegevens uit BRP ophalen',
   }
 };
