@@ -71,8 +71,7 @@ export default class MunicipalityLogos extends Component {
       <div class="mainContainer" style="padding-bottom: 0;">
         <div class="container lightBackground paddingBottom" style="padding-top: 20px">
           <div class="wrapper municipalityLogos">
-            <h2>Deelnemende gemeenten</h2>
-
+            <h2>Deze dienst wordt aangeboden door:</h2>
             <img src={alblasserdam} />
             <img src={amsterdam} />
             <img src={buren} />
