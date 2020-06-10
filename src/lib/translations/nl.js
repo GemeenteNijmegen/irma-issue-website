@@ -1,5 +1,5 @@
 export default {
   Home: {
-    title: 'Gegevens ophalen',
+    title: 'Gegevens toevoegen aan IRMA',
   }
 };

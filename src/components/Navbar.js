@@ -25,7 +25,7 @@ export default class Navbar extends Component {
           <header>
             <a href="/irma/gemeente/start" style={{height: '50px'}}>
               <img class="logo" src={irmaLogo} alt="IRMA Laden" />
-              <h2 class="headerTitleWithLogo" style={{fontSize: '1.5em'}}>IRMA Laden</h2>
+              <h2 class="headerTitleWithLogo"></h2>
             </a>
             <div class="navigationWrapper navigationSlider">
               <nav class="slidingNav">
