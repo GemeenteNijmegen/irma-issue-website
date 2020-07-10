@@ -12,7 +12,7 @@
     "build/*"
   ],
   "devDependencies": {
-    "@privacybydesign/irmajs": "^0.2.0-rc.9",
+    "@privacybydesign/irmajs": "^0.2.0-rc.8",
     "babel": "^6.5.2",
     "babel-core": "^6.24.0",
     "babel-eslint": "^8.2.2",
