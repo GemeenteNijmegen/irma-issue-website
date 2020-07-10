@@ -18,7 +18,8 @@ import Logout from './pages/logout';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
-require('./vendor/irma');
+//require('./vendor/irma');
+window.irma = require('./vendor/irma')
 
 export default class App extends Component {
 
