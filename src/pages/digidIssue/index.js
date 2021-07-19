@@ -2,7 +2,6 @@ import { Component, h } from 'preact';
 import DigidLogoutButton from '../../components/DigidLogoutButton';
 import { handleSession } from '@privacybydesign/irmajs';
 
-
 export default class DigidIssue extends Component {
 
   componentDidMount() {
