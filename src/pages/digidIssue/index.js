@@ -1,5 +1,6 @@
 import { Component, h } from 'preact';
 import DigidLogoutButton from '../../components/DigidLogoutButton';
+import { handleSession } from '@privacybydesign/irmajs';
 
 export default class DigidIssue extends Component {
 
@@ -18,7 +19,7 @@ export default class DigidIssue extends Component {
       return;
     }
 
-    window.irma.handleSession(sessionPtr, {language: 'nl'})
+    handleSession(sessionPtr, {language: 'nl'})
       .then(() => {
         this.setState({statusText: 'Uw attributen zijn succesvol geladen.'});
       })
