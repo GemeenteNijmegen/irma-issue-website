@@ -1,10 +1,11 @@
 import { Component, h } from 'preact';
+import { handleSession } from '@privacybydesign/irmajs';
 
 export default class Issue extends Component {
 
   componentDidMount() {
     const sessionPtrJson = window.irmaSessionPtr;
-    if(!sessionPtrJson || sessionPtrJson === '') {
+    if (!sessionPtrJson || sessionPtrJson === '') {
       console.error('Could not find sessionPtr on disclosure page');
       return;
     }
@@ -12,17 +13,17 @@ export default class Issue extends Component {
     let sessionPtr;
     try {
       sessionPtr = JSON.parse(sessionPtrJson);
-    } catch(e) {
+    } catch (e) {
       console.error('Could not parse sessionPtr');
       return;
     }
 
-    window.irma.handleSession(sessionPtr, {language: 'nl'})
+    handleSession(sessionPtr, { language: 'nl' })
       .then(() => {
         window.location = '/irma/gemeente/re-issue-final';
       })
       .catch(() => {
-        this.setState({statusText: 'Er is iets mis gegaan bij het opvragen van uw attributen'});
+        this.setState({ statusText: 'Er is iets mis gegaan bij het opvragen van uw attributen' });
       })
   }
 
@@ -31,14 +32,14 @@ export default class Issue extends Component {
       <div>
         <div class="homeContainer">
           <div class="homeSplashFade">
-              <div class="wrapper homeWrapper">
-                  <div class="inner">
-                      <h1 class="projectTitle">IRMA BRP attributen laden via IRMA</h1>
-                  </div>
-                  <div style="margin-top: 50px;">
-                      <p id="statusText">{ this.state.statusText }</p>
-                  </div>
+            <div class="wrapper homeWrapper">
+              <div class="inner">
+                <h1 class="projectTitle">IRMA BRP attributen laden via IRMA</h1>
               </div>
+              <div style="margin-top: 50px;">
+                <p id="statusText">{this.state.statusText}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
