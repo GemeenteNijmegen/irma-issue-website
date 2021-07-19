@@ -18,8 +18,6 @@ import Logout from './pages/logout';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
-require('./vendor/irma');
-
 export default class App extends Component {
 
   handleRoute = e => {
